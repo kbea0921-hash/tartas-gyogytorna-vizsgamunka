@@ -1,8 +1,8 @@
 const form = document.forms.namedItem("idopontkeres");
 const messages = {
-  nev: "Adjon meg egy fiktív nevet.",
-  telefon: "Adjon meg egy 7–24 karakter hosszú fiktív telefonszámot.",
-  email: "Adjon meg e-mail-formátumú fiktív címet, vagy hagyja üresen a mezőt.",
+  nev: "Adjon meg egy nevet.",
+  telefon: "Adjon meg egy 7–24 karakter hosszú telefonszámot.",
+  email: "Adjon meg e-mail-formátumú címet, vagy hagyja üresen a mezőt.",
   ok: "Válassza ki a kapcsolatfelvétel okát.",
   visszahivas: "Adjon meg egy napot vagy idősávot.",
   hozzajarulas: "A beküldéshez jelölje be a hozzájárulást."
