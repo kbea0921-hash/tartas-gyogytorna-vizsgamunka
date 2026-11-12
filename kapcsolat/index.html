@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kapcsolat és időpontkérés | Tartás Gyógytorna Stúdió</title>
+<meta name="description" content="Időpontkérés és visszahívás a Tartás Gyógytorna Stúdiónál. Gyakori kérdések, nyitvatartás és megközelítés.">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/form-validation.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#tartalom">Ugrás a tartalomhoz</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/"><strong>Tartás</strong><span>Gyógytorna Stúdió</span></a>
+    <button class="menu-toggle button secondary" type="button" aria-expanded="false" aria-controls="fomenu" hidden>Menü</button>
+    <nav id="fomenu" class="main-nav" aria-label="Fő navigáció">
+      <a href="/">Főoldal</a>
+      <a href="/kezelesek-es-arak/">Kezelések és árak</a>
+      <a href="/rolam/">Rólam</a>
+      <a href="/kapcsolat/" aria-current="page">Kapcsolat és időpontkérés</a>
+    </nav>
+    <div class="header-cta"><a class="button" href="/kapcsolat/#idopontkeres">Időpontot kérek</a>
+</div>
+  </div>
+</header>
+<main id="tartalom" tabindex="-1">
+<section class="section tint">
+<div class="container">
+<div class="stack prose intro">
+<h1>Kapcsolat és időpontkérés</h1>
+<p>Az űrlapon jelezheti, hogy felmérésre jelentkezne vagy valamelyik foglalkozás iránt érdeklődik.</p>
+</div>
+<div class="stack prose">
+<h2>Hogyan történik az egyeztetés?</h2>
+<ol class="steps"><li>Töltse ki az űrlapot, és adja meg, mikor érhető el telefonon.</li><li>Bálint visszahívja a megadott számon.</li><li>Telefonon egyeztetik az Önnek megfelelő időpontot.</li>
+</ol>
+<div class="actions"><a class="button" href="/kapcsolat/#idopontkeres">Ugrás az időpontkérő űrlaphoz</a><a class="text-link" href="/kapcsolat/#megkozelites">Nyitvatartás és megközelítés</a>
+</div>
+</div>
+</div>
+</section>
+<section id="gyik" class="section">
+<div class="container">
+<div class="stack prose">
+<h2>Gyakori kérdések</h2>
+<details><summary>
+<h3>Mit vigyek magammal?</h3></summary>
+<p>Ha van orvosi lelete, érdemes magával hoznia a találkozóra.</p>
+</details>
+<details><summary>
+<h3>Mit vegyek fel?</h3></summary>
+<p>Válasszon kényelmes ruhát, amelyben könnyen tud mozogni.</p>
+</details>
+<details><summary>
+<h3>Kell beutaló?</h3></summary>
+<p>A felméréshez nem kell beutaló.</p>
+</details>
+<details><summary>
+<h3>Mi történik az első alkalmon?</h3></summary>
+<p>A 60 perces alkalmon Bálint felméri az Ön kiinduló állapotát. Ez alapján kap otthon is végezhető gyakorlatsort.</p>
+</details>
+<details><summary>
+<h3>Hogyan történik az időpont-egyeztetés?</h3></summary>
+<p>Az űrlapon adja meg, mikor érhető el. Bálint visszahívja, hogy egyeztessék az időpontot.</p>
+</details>
+<details><summary>
+<h3>Hogyan lehet jelentkezni a kiscsoportos gerinctornára?</h3></summary>
+<p>Válassza az űrlapon a „kiscsoportos gerinctorna” kategóriát. Kedden és csütörtökön 18:00-kor van óra, legfeljebb öt fővel. Előzetes egyeztetés szükséges.</p>
+</details>
+</div>
+</div>
+</section>
+<section id="idopontkeres" class="section tint">
+<div class="container">
+<div class="stack prose">
+<h2>Időpontkérő űrlap</h2>
+<p>Válassza ki a kapcsolatfelvétel okát, és adja meg, mikor tud hívást fogadni.</p>
+<p class="small" id="form-notice">Kérjük, az űrlap próbaküldésekor ne adjon meg egészségügyi részleteket vagy orvosi leletet.</p>
+<form class="form-card stack" name="idopontkeres" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/koszonjuk/">
+<input type="hidden" name="form-name" value="idopontkeres">
+<div hidden><label>Hagyja üresen <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+</div>
+<div class="field">
+<label for="nev">Név</label>
+<input id="nev" name="nev" type="text" maxlength="80" required>
+<p class="error" id="nev-error" hidden>
+</p>
+</div>
+<div class="field">
+<label for="telefon">Telefonszám</label>
+<input id="telefon" name="telefon" type="tel" maxlength="24" pattern="(?=(?:[^0-9]*[0-9]){7})[+0-9 .\(\)\-]{7,24}" required aria-describedby="telefon-help">
+<small id="telefon-help">A visszahíváshoz használt telefonszám.</small>
+<p class="error" id="telefon-error" hidden>
+</p>
+</div>
+<div class="field">
+<label for="email">E-mail-cím (opcionális)</label>
+<input id="email" name="email" type="email" maxlength="120" aria-describedby="email-help">
+<small id="email-help">A mezőt üresen is hagyhatja.</small>
+<p class="error" id="email-error" hidden>
+</p>
+</div>
+<div class="field">
+<label for="ok">Kapcsolatfelvétel oka</label>
+<select id="ok" name="ok" required aria-describedby="ok-help"><option value="">Válasszon a listából</option><option>Hát- vagy nyakpanasszal kapcsolatban érdeklődöm</option><option>Sérülés utáni rehabilitáció</option><option>Műtét utáni rehabilitáció</option><option>Kiscsoportos gerinctorna</option><option>Nem tudom, melyik lehetőség megfelelő</option><option>Egyéb általános érdeklődés</option></select>
+<small id="ok-help">Válassza ki a megfelelő kategóriát.</small>
+<p class="error" id="ok-error" hidden>
+</p>
+</div>
+<div class="field">
+<label for="visszahivas">Mikor érhető el visszahívásra?</label>
+<input id="visszahivas" name="visszahivas" type="text" maxlength="80" required aria-describedby="visszahivas-help">
+<small id="visszahivas-help">Csak napot vagy idősávot adjon meg, például hétköznap 16:00 után.</small>
+<p class="error" id="visszahivas-error" hidden>
+</p>
+</div>
+<div class="field">
+<div class="check"><input type="checkbox" id="hozzajarulas" name="hozzajarulas" value="igen" required><label for="hozzajarulas">Hozzájárulok az űrlapon megadott adatok kezeléséhez az <a href="/adatkezeles/">adatkezelési tájékoztató</a> szerint.</label>
+</div>
+<p class="error" id="hozzajarulas-error" hidden>
+</p>
+</div>
+<button class="button" type="submit">Időpontkérés elküldése</button>
+</form>
+</div>
+</div>
+</section>
+<section id="megkozelites" class="section">
+<div class="container">
+<h2>Nyitvatartás és megközelítés</h2>
+<div class="cards">
+<div class="card stack">
+<h3>Nyitvatartás</h3>
+<p>Hétfőtől péntekig 7:00–19:00, kizárólag előre egyeztetett időpontban.</p>
+</div>
+<div class="card stack">
+<h3>Cím és parkolás</h3>
+<p>4024 Debrecen, Harmónia köz 4., I. emelet. A rendelőházban van lift. A környező utcákban fizetős közterületi parkolás van.</p>
+</div>
+<div class="card stack">
+<h3>Elérhetőségek</h3>
+<ul><li>Telefon: +36 30 000 0000</li><li>E-mail: idopont@tartasgyogytorna.example</li>
+</ul>
+</div>
+</div>
+<p class="small">A cím, a telefonszám és az e-mail-cím fiktív, portfóliócélú adat.</p>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+<p class="footer-name">Tartás Gyógytorna Stúdió · Debrecen</p>
+<p class="small">Portfóliócélú vizsgaprojekt. A vállalkozás és az elérhetőségek fiktívek.</p>
+</div>
+    <a class="text-link" href="/adatkezeles/">Adatkezelési tájékoztató</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Node.js és újraépíthető kimenet
+node_modules/
+dist/
+.npm/
+.vite/
+.cache/
+*.log
+
+# Helyi beállítások és titkok
+.env
+.env.*
+.netlify/
+.vscode/
+.idea/
+*.pem
+*.key
+
+# Rendszerfájlok és ideiglenes állományok
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+*.swp
+*~
+
+# Helyi munkapéldányok és átadási csomagok
+*.zip
+/_D__*.png
+/assets/images/candidates/
+/assets/images/optimized/

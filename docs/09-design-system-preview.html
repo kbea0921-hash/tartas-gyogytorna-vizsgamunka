@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tartás Gyógytorna Stúdió – design system előnézet</title>
+<style>
+:root {
+  --color-primary: #205E53;
+  --color-primary-hover: #174B42;
+  --color-primary-active: #103D36;
+  --color-focus: #205E53;
+  --color-focus-gap: #FFFFFF;
+  --color-ink: #1D302D;
+  --color-muted: #465D58;
+  --color-section: #EAF2F0;
+  --color-surface: #FFFFFF;
+  --color-page: #F7FAF9;
+  --color-border: #C5D3CE;
+  --color-control-border: #647D76;
+  --color-warm: #F1E8DC;
+  --color-disabled: #E0E8E5;
+  --color-error: #9A3434;
+  --font-size-h1: 36px; --font-weight-h1: 600; --line-height-h1: 1.12;
+  --font-size-h2: 28px; --font-weight-h2: 600; --line-height-h2: 1.2;
+  --font-size-h3: 22px; --font-weight-h3: 600; --line-height-h3: 1.3;
+  --font-size-body: 16px; --font-weight-body: 400; --line-height-body: 1.55;
+  --font-size-small: 14px; --font-weight-small: 400; --line-height-small: 1.45;
+  --font-size-nav: 16px; --font-weight-nav: 600; --line-height-nav: 1.35;
+  --font-size-button: 16px; --font-weight-button: 600; --line-height-button: 1.25;
+  --font-family: "Segoe UI", Arial, sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --content-max: 1200px; --gutter: 16px; --section-space: 48px;
+  --radius-card: 16px; --radius-control: 9px; --touch-target: 44px;
+  --focus-width: 2px; --focus-offset: 2px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--color-page); color: var(--color-ink); font: var(--font-weight-body) var(--font-size-body)/var(--line-height-body) var(--font-family); }
+main { width: min(var(--content-max), calc(100% - 2 * var(--gutter))); margin: var(--space-6) auto; }
+h1, h2, h3, p { margin: 0; }
+h1, .type-h1 { font-size: var(--font-size-h1); font-weight: var(--font-weight-h1); line-height: var(--line-height-h1); }
+h2, .type-h2 { font-size: var(--font-size-h2); font-weight: var(--font-weight-h2); line-height: var(--line-height-h2); }
+h3, .type-h3 { font-size: var(--font-size-h3); font-weight: var(--font-weight-h3); line-height: var(--line-height-h3); }
+small, .small { color: var(--color-muted); font-size: var(--font-size-small); line-height: var(--line-height-small); }
+a { color: var(--color-primary); text-underline-offset: .2em; }
+a:hover { color: var(--color-primary-hover); }
+a:active { color: var(--color-primary-active); }
+:focus-visible, .is-focus { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); box-shadow: 0 0 0 var(--focus-offset) var(--color-focus-gap); }
+.stack { display: grid; gap: var(--space-3); }
+.grid { display: grid; gap: var(--space-4); margin-block: var(--space-5); }
+.panel, .card, .photo { border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: var(--space-4); background: var(--color-surface); min-width: 0; }
+.panel { display: grid; align-content: start; gap: var(--space-4); }
+.card { background: var(--color-surface); }
+.photo { aspect-ratio: 3/2; display: grid; place-content: center; background: var(--color-section); }
+.badge { display: inline-block; width: fit-content; border-radius: var(--radius-control); background: var(--color-warm); padding: var(--space-2) var(--space-3); }
+.logo { display: inline-grid; color: var(--color-ink); text-decoration: none; padding: var(--space-3); gap: 2px; }
+.logo strong { font-size: 24px; font-weight: 600; line-height: 1.1; }
+.mock-header { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: space-between; align-items: center; background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: var(--space-2) var(--space-3); }
+.nav { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
+.nav a:not([aria-current="page"]):not(:hover) { text-decoration: none; }
+.nav a { font-size: var(--font-size-nav); font-weight: var(--font-weight-nav); line-height: var(--line-height-nav); }
+.hit, summary { min-height: var(--touch-target); min-width: var(--touch-target); display: inline-flex; align-items: center; padding: var(--space-2); }
+.mobile-nav { display: block; }
+.mobile-nav summary { display: list-item; cursor: pointer; }
+.desktop-nav { display: none; }
+.mobile-nav nav { display: grid; }
+.palette { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 128px),1fr)); gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.palette li { border: 1px solid var(--color-border); border-radius: var(--radius-control); overflow: hidden; display: grid; }
+.swatch { height: 32px; border-bottom: 1px solid var(--color-border); }
+.palette strong, .palette small { padding-inline: var(--space-2); }
+.palette small { padding-bottom: var(--space-2); }
+.state-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-2); align-items: center; }
+.state-row strong { grid-column: 1/-1; font-size: var(--font-size-small); }
+.btn { min-width: var(--touch-target); min-height: var(--touch-target); padding: 12px 18px; border: 1px solid var(--color-primary); border-radius: var(--radius-control); font: var(--font-weight-button) var(--font-size-button)/var(--line-height-button) var(--font-family); cursor: pointer; }
+.primary { color: var(--color-surface); background: var(--color-primary); }
+.secondary { color: var(--color-primary); background: var(--color-surface); }
+.primary:hover, .primary.is-hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); }
+.secondary:hover, .secondary.is-hover { background: var(--color-section); color: var(--color-primary-hover); border-color: var(--color-primary-hover); }
+.primary:active, .primary.is-active { background: var(--color-primary-active); border-color: var(--color-primary-active); }
+.secondary:active, .secondary.is-active { background: var(--color-section); color: var(--color-primary-active); border-color: var(--color-primary-active); box-shadow: inset 0 0 0 1px var(--color-primary-active); }
+.btn:disabled { background: var(--color-disabled); color: var(--color-muted); border-color: var(--color-control-border); cursor: default; box-shadow: none; }
+.field { display: grid; gap: var(--space-2); }
+.field :is(input, select) { width: 100%; min-width: 0; min-height: var(--touch-target); border: 1px solid var(--color-control-border); border-radius: var(--radius-control); color: var(--color-ink); background: var(--color-surface); font: inherit; padding: var(--space-2) var(--space-3); }
+.field :is(input, select):hover:not(:disabled), .field :is(input, select):focus-visible { border-color: var(--color-primary); }
+.field input::placeholder { color: var(--color-muted); opacity: 1; }
+.field input:disabled { background: var(--color-disabled); color: var(--color-muted); }
+.field input[aria-invalid="true"] { border-color: var(--color-error); }
+.error { color: var(--color-error); }
+.check { display: flex; gap: var(--space-2); min-height: var(--touch-target); align-items: center; }
+.check input { flex: 0 0 auto; accent-color: var(--color-primary); }
+details.faq { border: 1px solid var(--color-border); border-radius: var(--radius-card); }
+details.faq summary { display: list-item; cursor: pointer; padding-inline: var(--space-4); }
+details.faq p { padding: var(--space-3) var(--space-4) var(--space-4); }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: var(--space-2); border-bottom: 1px solid var(--color-border); text-align: left; }
+@media (max-width: 400px) { th, td { padding-inline: 4px; font-size: var(--font-size-small); } }
+th:last-child, td:last-child { text-align: right; white-space: nowrap; }
+.mock-footer { padding: var(--space-5); background: var(--color-section); border-radius: var(--radius-card); }
+@media (min-width: 768px) {
+  :root { --gutter: 24px; }
+  .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .wide { grid-column: 1/-1; }
+  .panel, .card { padding: var(--space-5); }
+  .state-row { grid-template-columns: 90px repeat(2,minmax(0,1fr)); }
+  .state-row strong { grid-column: auto; }
+}
+@media (min-width: 1024px) {
+  :root { --gutter: 32px; --section-space: 64px; --font-size-h1: 52px; --font-size-h2: 36px; --font-size-h3: 24px; --font-size-body: 18px; }
+  .logo strong { font-size: 26px; }
+  .photo { aspect-ratio: 4/3; }
+  .desktop-nav { display: flex; }
+  .mobile-nav { display: none; }
+}
+</style>
+</head>
+<body>
+<main>
+<header class="stack">
+  <p class="small">B · Csendes szakmaiság</p>
+  <h1>Design system előnézet</h1>
+  <p>A Tartás Gyógytorna Stúdió arculati mintái. A gombállapotok rögzített mintaként is láthatók. A menü, a GYIK és a mezők billentyűzettel kipróbálhatók.</p>
+  <div class="mock-header">
+    <a class="logo" href="#tipografia"><strong>Tartás</strong><small>Gyógytorna Stúdió</small></a>
+    <nav class="nav desktop-nav" aria-label="Asztali menüminta">
+      <a class="hit" href="#tipografia" aria-current="page">Főoldal</a>
+      <a class="hit" href="#arak">Kezelések és árak</a>
+      <a class="hit" href="#bemutatkozas">Rólam</a>
+      <a class="hit" href="#idopontkeres">Kapcsolat és időpontkérés</a>
+    </nav>
+    <details class="mobile-nav">
+      <summary>Menü</summary>
+      <nav class="nav" aria-label="Mobilmenü minta">
+        <a class="hit" href="#tipografia" aria-current="page">Főoldal</a>
+        <a class="hit" href="#arak">Kezelések és árak</a>
+        <a class="hit" href="#bemutatkozas">Rólam</a>
+        <a class="hit" href="#idopontkeres">Kapcsolat és időpontkérés</a>
+      </nav>
+    </details>
+  </div>
+</header>
+<div class="grid">
+  <section class="panel wide">
+    <h2>Színpaletta</h2>
+    <ul class="palette">
+<li><span class="swatch" style="background:var(--color-primary)"></span><strong>#205E53</strong><small>Elsődleges CTA és szöveges link</small></li>
+<li><span class="swatch" style="background:var(--color-primary-hover)"></span><strong>#174B42</strong><small>CTA és link hover</small></li>
+<li><span class="swatch" style="background:var(--color-primary-active)"></span><strong>#103D36</strong><small>Lenyomott CTA és link</small></li>
+<li><span class="swatch" style="background:var(--color-focus)"></span><strong>#205E53</strong><small>Külső fókuszgyűrű</small></li>
+<li><span class="swatch" style="background:var(--color-focus-gap)"></span><strong>#FFFFFF</strong><small>Belső fókuszelválasztás</small></li>
+<li><span class="swatch" style="background:var(--color-ink)"></span><strong>#1D302D</strong><small>Címsor és törzsszöveg</small></li>
+<li><span class="swatch" style="background:var(--color-muted)"></span><strong>#465D58</strong><small>Kísérőszöveg és helyőrző</small></li>
+<li><span class="swatch" style="background:var(--color-section)"></span><strong>#EAF2F0</strong><small>Halvány szürkészöld szakasz</small></li>
+<li><span class="swatch" style="background:var(--color-surface)"></span><strong>#FFFFFF</strong><small>Fehér felület és telt gombfelirat</small></li>
+<li><span class="swatch" style="background:var(--color-page)"></span><strong>#F7FAF9</strong><small>Általános oldalháttér</small></li>
+<li><span class="swatch" style="background:var(--color-border)"></span><strong>#C5D3CE</strong><small>Kártya és elválasztó</small></li>
+<li><span class="swatch" style="background:var(--color-control-border)"></span><strong>#647D76</strong><small>Mezőkontúr és letiltott gombkeret</small></li>
+<li><span class="swatch" style="background:var(--color-warm)"></span><strong>#F1E8DC</strong><small>Meleg neutrális címkehátterek és kis részletek</small></li>
+<li><span class="swatch" style="background:var(--color-disabled)"></span><strong>#E0E8E5</strong><small>Letiltott gomb és mező</small></li>
+<li><span class="swatch" style="background:var(--color-error)"></span><strong>#9A3434</strong><small>Hibaüzenet és hibás mezőkeret</small></li>
+    </ul>
+  </section>
+  <section class="panel" id="tipografia">
+    <h2>Tipográfia</h2>
+    <div class="stack"><span class="small">H1</span><p class="type-h1">Személyre szabott gyógytorna Debrecenben</p></div>
+    <div class="stack"><span class="small">H2</span><p class="type-h2">Melyik lehetőség illik az Ön helyzetéhez?</p></div>
+    <div class="stack"><span class="small">H3</span><p class="type-h3" id="bemutatkozas">Németh Bálint gyógytornász</p></div>
+    <p>Ha hát- vagy nyakpanasszal, illetve sérülés vagy műtét után keres gyógytornászt, egyéni felméréssel kezdünk.</p>
+    <small>Portfóliócélú vizsgaprojekt. A vállalkozás és az elérhetőségek fiktívek.</small>
+    <a class="hit" href="#gyik">Gyakori kérdések</a>
+  </section>
+  <section class="panel">
+    <h2>Gombok és fókusz</h2>
+<div class="state-row"><strong>Alap</strong><button type="button" class="btn primary ">Időpontot kérek</button><button type="button" class="btn secondary ">Kezelések és árak</button></div>
+<div class="state-row"><strong>Hover</strong><button type="button" class="btn primary is-hover">Időpontot kérek</button><button type="button" class="btn secondary is-hover">Kezelések és árak</button></div>
+<div class="state-row"><strong>Aktív</strong><button type="button" class="btn primary is-active">Időpontot kérek</button><button type="button" class="btn secondary is-active">Kezelések és árak</button></div>
+<div class="state-row"><strong>Fókusz</strong><button type="button" class="btn primary is-focus">Időpontot kérek</button><button type="button" class="btn secondary is-focus">Kezelések és árak</button></div>
+<div class="state-row"><strong>Letiltott</strong><button type="button" class="btn primary disabled" disabled>Időpontot kérek</button><button type="button" class="btn secondary disabled" disabled>Kezelések és árak</button></div>
+  </section>
+  <section class="panel">
+    <h2>Szolgáltatás és bizalom</h2>
+    <article class="card stack">
+      <h3>Egyéni gyógytorna</h3>
+      <p>Ha hát- vagy nyakpanasza van, Bálint egyéni foglalkozáson dolgozik Önnel. Kezdésként kérjen időpontot felmérésre.</p>
+    </article>
+    <p class="badge">9 év gyógytornászi tapasztalat</p>
+  </section>
+  <section class="panel" id="arak">
+    <h2>Árak</h2>
+    <table>
+      <thead><tr><th scope="col">Szolgáltatás</th><th scope="col">Időtartam</th><th scope="col">Ár</th></tr></thead>
+      <tbody><tr><td>Első felmérés</td><td>60 perc</td><td>15 000 Ft</td></tr><tr><td>Egyéni gyógytorna</td><td>50 perc</td><td>13 000 Ft</td></tr></tbody>
+    </table>
+  </section>
+  <section class="panel" id="idopontkeres">
+    <h2>Időpontkérő űrlap</h2>
+    <p class="small">Ez az űrlap egy portfóliócélú mintaprojekt része. Kérjük, ne adjon meg valós személyes vagy egészségügyi adatot, és ne küldjön orvosi leletet. Próba esetén használjon fiktív adatokat.</p>
+    <label class="field">Név<input type="text" aria-describedby="name-help"><small id="name-help">A próbaküldéshez adjon meg egy fiktív nevet.</small></label>
+    <label class="field">Kapcsolatfelvétel oka
+      <select><option value="">Válasszon a listából</option><option>hát- vagy nyakpanasszal kapcsolatban érdeklődöm</option><option>sérülés utáni rehabilitáció</option><option>műtét utáni rehabilitáció</option><option>kiscsoportos gerinctorna</option><option>nem tudom, melyik lehetőség megfelelő</option><option>egyéb általános érdeklődés</option></select>
+    </label>
+    <p class="small">Hibaállapot mintája</p>
+    <label class="field">Telefonszám<input type="tel" aria-invalid="true" aria-describedby="tel-error"><small class="error" id="tel-error">A próbához fiktív számot adjon meg.</small></label>
+    <p class="small">Letiltott állapot mintája</p>
+    <label class="field">E-mail-cím (opcionális)<input type="email" disabled></label>
+    <label class="check"><input type="checkbox">Adatkezelési hozzájárulás</label>
+  </section>
+  <section class="panel" id="gyik">
+    <h2>Gyakori kérdések</h2>
+    <details class="faq"><summary>Kell beutaló?</summary><p>A felméréshez nem kell beutaló.</p></details>
+    <details class="faq"><summary>Mit vegyek fel?</summary><p>Válasszon kényelmes ruhát, amelyben könnyen tud mozogni.</p></details>
+    <div class="photo">
+      <div class="stack"><strong>Fotóstílus · helyőrző</strong><p class="small">Természetes fény, emberközeli helyzet, meleg neutrális környezet.</p></div>
+    </div>
+  </section>
+</div>
+<footer class="mock-footer stack">
+  <strong>Tartás Gyógytorna Stúdió · Debrecen</strong>
+  <a class="hit" href="#adatkezeles">Adatkezelési tájékoztató</a>
+  <p class="small" id="adatkezeles">Portfóliócélú vizsgaprojekt. A vállalkozás és az elérhetőségek fiktívek.</p>
+</footer>
+</main>
+</body>
+</html>

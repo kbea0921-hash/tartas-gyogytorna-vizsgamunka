@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tartás Gyógytorna Stúdió – arculati irányok</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #f2f3f5; color: #202731; font: 1rem/1.5 system-ui, sans-serif; }
+main { max-width: 1440px; margin: auto; padding: clamp(16px, 3vw, 40px); }
+h1, h2, h3, p { margin: 0; }
+header { margin-bottom: 24px; }
+header p, .summary p { margin-top: 8px; }
+.eyebrow { font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.direction { background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: 16px; min-width: 0; display: grid; align-content: start; gap: 13px; font-family: var(--body); }
+.direction h2, .direction h3 { font-family: var(--head); font-weight: var(--weight); line-height: 1.15; }
+.direction h2 { font-size: 1.35rem; }
+.direction h3 { font-size: clamp(1.45rem, 2vw, 2rem); }
+.meta { color: var(--muted); font-size: .89rem; }
+.colors { display: grid; grid-template-columns: repeat(auto-fit, minmax(76px, 1fr)); gap: 6px; list-style: none; margin: 0; padding: 0; font-size: .75rem; }
+.colors li { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+.swatch { height: 20px; display: block; background: var(--color); border-bottom: 1px solid var(--line); }
+.colors small, .colors code { display: block; padding-inline: 4px; color: var(--ink); font-size: inherit; }
+.hero, .service { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; display: grid; gap: 10px; }
+.c .service { border-inline-start: 4px solid var(--accent); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+button { font: inherit; font-size: .9rem; font-weight: 700; padding: 7px 10px; min-height: 44px; border: 1px solid var(--accent); border-radius: var(--btn); background: var(--accent); color: var(--surface); text-align: left; }
+button.primary:hover { background: var(--hover); }
+button.secondary { background: transparent; color: var(--accent); }
+button.secondary:hover { background: var(--bg); }
+button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.photo { border: 1px dashed var(--line); border-radius: var(--radius); padding: 9px 11px; background: #e7e9ed; color: #333d4b; font-size: .83rem; }
+.service h4 { margin: 0; font-family: var(--head); font-weight: var(--weight); font-size: 1.08rem; }
+.summary { margin-top: 20px; padding: 18px; border: 1px solid #c8cdd5; border-radius: 10px; background: white; }
+.summary ul { padding-left: 1.25em; }
+@media (max-width: 950px) { .grid { grid-template-columns: 1fr; } .direction h3 { font-size: 1.65rem; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <p class="eyebrow">Tartás Gyógytorna Stúdió</p>
+  <h1>Három arculati irány</h1>
+  <p>Azonos főcím, szolgáltatáskártya és gombfeliratok három vizuális megközelítésben. A gombok megjelenési minták.</p>
+</header>
+<div class="grid">
+<article class="direction a" aria-labelledby="direction-A" style="--bg:#F6EFE6;--surface:#FFFCF7;--ink:#332820;--muted:#645246;--accent:#854830;--hover:#6F3823;--line:#8C7462;--head:Georgia, 'Times New Roman', serif;--body:'Segoe UI', Arial, sans-serif;--weight:700;--radius:18px;--btn:10px">
+  <h2 id="direction-A">A. Meleg természetesség</h2>
+  <p class="meta">meleg · természetes · közvetlen · nyugodt · otthonos</p>
+  <p class="meta">Címsor · Georgia<br>Törzsszöveg · Segoe UI</p>
+  <ul class="colors" aria-label="Színpaletta">
+    <li><span class="swatch" style="--color:#F6EFE6" aria-hidden="true"></span><small>Háttér</small><code>#F6EFE6</code></li>
+    <li><span class="swatch" style="--color:#FFFCF7" aria-hidden="true"></span><small>Felület</small><code>#FFFCF7</code></li>
+    <li><span class="swatch" style="--color:#332820" aria-hidden="true"></span><small>Szöveg</small><code>#332820</code></li>
+    <li><span class="swatch" style="--color:#645246" aria-hidden="true"></span><small>Kísérő</small><code>#645246</code></li>
+    <li><span class="swatch" style="--color:#854830" aria-hidden="true"></span><small>CTA</small><code>#854830</code></li>
+    <li><span class="swatch" style="--color:#6F3823" aria-hidden="true"></span><small>Hover</small><code>#6F3823</code></li>
+    <li><span class="swatch" style="--color:#8C7462" aria-hidden="true"></span><small>Keret</small><code>#8C7462</code></li>
+  </ul>
+  <section class="hero">
+    <h3>Személyre szabott gyógytorna Debrecenben</h3>
+    <p>Ha hát- vagy nyakpanasszal, illetve sérülés vagy műtét után keres gyógytornászt, egyéni felméréssel kezdünk.</p>
+    <div class="actions"><button class="primary" type="button">Időpontot kérek</button><button class="secondary" type="button">Kezelések és árak</button></div>
+  </section>
+  <div class="photo"><strong>Fotóstílus · helyőrző</strong><br>Szórt ablakfény, meleg neutrális környezet, természetes testhelyzet.</div>
+  <section class="service">
+    <h4>Egyéni gyógytorna</h4>
+    <p>Hát- vagy nyakpanasszal 50 perces, egyéni foglalkozásra jelentkezhet.</p>
+    <p class="meta">50 perc · 13 000 Ft</p>
+  </section>
+</article>
+<article class="direction b" aria-labelledby="direction-B" style="--bg:#EAF2F0;--surface:#FFFFFF;--ink:#1D302D;--muted:#465D58;--accent:#205E53;--hover:#174B42;--line:#647D76;--head:'Segoe UI', Arial, sans-serif;--body:'Segoe UI', Arial, sans-serif;--weight:600;--radius:6px;--btn:6px">
+  <h2 id="direction-B">B. Csendes szakmaiság</h2>
+  <p class="meta">rendezett · nyugodt · szakmai · világos · közérthető</p>
+  <p class="meta">Címsor · Segoe UI Semibold<br>Törzsszöveg · Segoe UI</p>
+  <ul class="colors" aria-label="Színpaletta">
+    <li><span class="swatch" style="--color:#EAF2F0" aria-hidden="true"></span><small>Háttér</small><code>#EAF2F0</code></li>
+    <li><span class="swatch" style="--color:#FFFFFF" aria-hidden="true"></span><small>Felület</small><code>#FFFFFF</code></li>
+    <li><span class="swatch" style="--color:#1D302D" aria-hidden="true"></span><small>Szöveg</small><code>#1D302D</code></li>
+    <li><span class="swatch" style="--color:#465D58" aria-hidden="true"></span><small>Kísérő</small><code>#465D58</code></li>
+    <li><span class="swatch" style="--color:#205E53" aria-hidden="true"></span><small>CTA</small><code>#205E53</code></li>
+    <li><span class="swatch" style="--color:#174B42" aria-hidden="true"></span><small>Hover</small><code>#174B42</code></li>
+    <li><span class="swatch" style="--color:#647D76" aria-hidden="true"></span><small>Keret</small><code>#647D76</code></li>
+  </ul>
+  <section class="hero">
+    <h3>Személyre szabott gyógytorna Debrecenben</h3>
+    <p>Ha hát- vagy nyakpanasszal, illetve sérülés vagy műtét után keres gyógytornászt, egyéni felméréssel kezdünk.</p>
+    <div class="actions"><button class="primary" type="button">Időpontot kérek</button><button class="secondary" type="button">Kezelések és árak</button></div>
+  </section>
+  <div class="photo"><strong>Fotóstílus · helyőrző</strong><br>Puha nappali fény, világos falak, figyelmes gyógytornász és páciens.</div>
+  <section class="service">
+    <h4>Egyéni gyógytorna</h4>
+    <p>Hát- vagy nyakpanasszal 50 perces, egyéni foglalkozásra jelentkezhet.</p>
+    <p class="meta">50 perc · 13 000 Ft</p>
+  </section>
+</article>
+<article class="direction c" aria-labelledby="direction-C" style="--bg:#E9EEF8;--surface:#FFFFFF;--ink:#192943;--muted:#475878;--accent:#264F9E;--hover:#1D3F80;--line:#6C80A3;--head:'Trebuchet MS', Arial, sans-serif;--body:Arial, sans-serif;--weight:700;--radius:12px;--btn:999px">
+  <h2 id="direction-C">C. Határozott lendület</h2>
+  <p class="meta">modern · határozott · biztonságos · lendületes · fegyelmezett</p>
+  <p class="meta">Címsor · Trebuchet MS Bold<br>Törzsszöveg · Arial</p>
+  <ul class="colors" aria-label="Színpaletta">
+    <li><span class="swatch" style="--color:#E9EEF8" aria-hidden="true"></span><small>Háttér</small><code>#E9EEF8</code></li>
+    <li><span class="swatch" style="--color:#FFFFFF" aria-hidden="true"></span><small>Felület</small><code>#FFFFFF</code></li>
+    <li><span class="swatch" style="--color:#192943" aria-hidden="true"></span><small>Szöveg</small><code>#192943</code></li>
+    <li><span class="swatch" style="--color:#475878" aria-hidden="true"></span><small>Kísérő</small><code>#475878</code></li>
+    <li><span class="swatch" style="--color:#264F9E" aria-hidden="true"></span><small>CTA</small><code>#264F9E</code></li>
+    <li><span class="swatch" style="--color:#1D3F80" aria-hidden="true"></span><small>Hover</small><code>#1D3F80</code></li>
+    <li><span class="swatch" style="--color:#6C80A3" aria-hidden="true"></span><small>Keret</small><code>#6C80A3</code></li>
+  </ul>
+  <section class="hero">
+    <h3>Személyre szabott gyógytorna Debrecenben</h3>
+    <p>Ha hát- vagy nyakpanasszal, illetve sérülés vagy műtét után keres gyógytornászt, egyéni felméréssel kezdünk.</p>
+    <div class="actions"><button class="primary" type="button">Időpontot kérek</button><button class="secondary" type="button">Kezelések és árak</button></div>
+  </section>
+  <div class="photo"><strong>Fotóstílus · helyőrző</strong><br>Természetes mozgás közben készült képkivágás, nyugodt háttér, visszafogott színek.</div>
+  <section class="service">
+    <h4>Egyéni gyógytorna</h4>
+    <p>Hát- vagy nyakpanasszal 50 perces, egyéni foglalkozásra jelentkezhet.</p>
+    <p class="meta">50 perc · 13 000 Ft</p>
+  </section>
+</article>
+</div>
+<section class="summary">
+  <h2>Összehasonlítás</h2>
+  <ul>
+    <li><strong>A.</strong> Földszínek és talpas címsorok a személyesebb első benyomáshoz.</li>
+    <li><strong>B.</strong> Szürkészöld felületek és egységes tipográfia a gyors áttekintéshez.</li>
+    <li><strong>C.</strong> Erősebb kék kiemelések és kerek gombok a határozottabb ritmushoz.</li>
+  </ul>
+  <p><strong>Szakmai ajánlásom a B irány.</strong> Az árak és az űrlap áttekinthetők, az elsődleges gomb könnyen felismerhető. A választás emberi jóváhagyásra vár.</p>
+</section>
+</main>
+</body>
+</html>

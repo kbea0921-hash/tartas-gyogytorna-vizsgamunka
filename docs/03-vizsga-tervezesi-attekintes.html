@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tartás Gyógytorna Stúdió – oldaltérkép és főoldalstruktúra</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f2f4f7; color: #17243a; font: 1rem/1.4 system-ui, sans-serif; }
+  main { max-width: 1280px; margin: 0 auto; padding: 34px 32px 24px; }
+  h1, h2, p { margin: 0; }
+  h1 { font-size: clamp(1.65rem, 3vw, 2.65rem); line-height: 1.15; max-width: 1080px; }
+  h2 { font-size: 1.27rem; margin-bottom: 14px; }
+  header { margin-bottom: 24px; }
+  .eyebrow, .branch-label { font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #455771; }
+  .eyebrow { margin-bottom: 8px; }
+  .panels { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 18px; }
+  .panel, .flow { background: #fff; border: 1px solid #d6dde7; border-radius: 12px; padding: 19px 22px; }
+  .tree, .branch, .sequence, .steps { list-style: none; padding: 0; margin: 0; }
+  .root, .node { border-radius: 6px; padding: 8px 11px; background: #edf1f6; }
+  .root { font-weight: 700; }
+  .branch { border-inline-start: 2px solid #c8d2e1; padding-inline-start: 16px; margin: 10px 0 0 12px; display: grid; gap: 6px; }
+  .branch-label { margin-top: 3px; }
+  .utility { background: #fff; border: 1px dashed #a7b6ca; }
+  .sequence { counter-reset: section; display: grid; gap: 5px; }
+  .sequence li { counter-increment: section; display: flex; align-items: center; gap: 10px; min-height: 34px; background: #f4f6f9; border-radius: 6px; padding: 4px 9px; }
+  .sequence li::before { content: counter(section, decimal-leading-zero); flex: 0 0 1.8rem; font-size: .78rem; font-weight: 700; color: #455771; }
+  .sequence .action { background: #e8eef8; font-weight: 650; }
+  .flow { margin-top: 18px; }
+  .flow h2 { margin-bottom: 9px; }
+  .steps { display: flex; flex-wrap: wrap; gap: 7px 12px; align-items: center; }
+  .steps li { display: flex; align-items: center; gap: 12px; }
+  .steps span { padding: 6px 10px; background: #edf1f6; border-radius: 6px; }
+  .arrow { color: #455771; font-style: normal; }
+  code { font-size: .94em; }
+  footer { padding-top: 14px; font-size: .8rem; color: #455771; }
+  @media (max-width: 760px) {
+    main { padding: 22px 14px; }
+    .panels { grid-template-columns: minmax(0, 1fr); }
+    .panel, .flow { padding: 15px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Vizsgadokumentáció · Jóváhagyott szerkezet</p>
+    <h1>Tartás Gyógytorna Stúdió – oldaltérkép és főoldalstruktúra</h1>
+  </header>
+  <div class="panels">
+    <section class="panel" aria-labelledby="sitemap">
+      <h2 id="sitemap">Oldaltérkép</h2>
+      <ul class="tree" role="list">
+        <li>
+          <p class="root">Főoldal <small>· belépőoldal és főmenüelem</small></p>
+          <ul class="branch" role="list" aria-label="További főmenüelemek">
+            <li class="branch-label">További főmenüelemek</li>
+            <li class="node">Kezelések és árak</li>
+            <li class="node">Rólam</li>
+            <li class="node">Kapcsolat és időpontkérés</li>
+          </ul>
+          <ul class="branch" role="list" aria-label="Kiegészítő oldal a közös láblécből">
+            <li class="branch-label">Kiegészítő oldal · közös lábléc</li>
+            <li class="node utility">Adatkezelési tájékoztató</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="panel" aria-labelledby="homepage">
+      <h2 id="homepage">A Főoldal végleges szakaszsorrendje</h2>
+      <ol class="sequence" role="list">
+        <li>Fejléc</li>
+        <li class="action">Hero és elsődleges CTA</li>
+        <li>Rövid bizalmi sáv</li>
+        <li>Három szolgáltatás összehasonlítása</li>
+        <li>Első alkalom</li>
+        <li>Rövid Rólam-előnézet</li>
+        <li class="action">Záró időpontkérő CTA</li>
+        <li>Lábléc</li>
+      </ol>
+    </section>
+  </div>
+  <section class="flow" aria-labelledby="cta">
+    <h2 id="cta">CTA-folyamat</h2>
+    <ol class="steps" role="list">
+      <li><span>Időpontot kérek</span></li>
+      <li><i class="arrow" aria-hidden="true">→</i><span>Kapcsolat oldal</span></li>
+      <li><i class="arrow" aria-hidden="true">→</i><span><code>#idopontkeres</code></span></li>
+      <li><i class="arrow" aria-hidden="true">→</i><span>Visszahívásos egyeztetés</span></li>
+    </ol>
+  </section>
+  <footer>AI-val támogatott tervezési folyamat – portfóliócélú vizsgaprojekt</footer>
+</main>
+</body>
+</html>
