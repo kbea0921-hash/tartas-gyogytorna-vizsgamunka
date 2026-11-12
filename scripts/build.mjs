@@ -11,6 +11,8 @@ const files = [
   "kapcsolat/index.html",
   "adatkezeles/index.html",
   "koszonjuk/index.html",
+  "sitemap.xml",
+  "robots.txt",
   "assets/css/styles.css",
   "assets/js/main.js",
   "assets/js/form-validation.js",

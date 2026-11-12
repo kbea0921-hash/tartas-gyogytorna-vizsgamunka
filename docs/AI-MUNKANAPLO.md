@@ -135,3 +135,9 @@
 - A felhasználó jóváhagyta a V1 asztali és mobilnézetét.
 - A helyi Git-verziókövetés a main ágon indul. A forrás, a buildszkriptek, a dokumentáció, a négy végleges WebP és a Beadás mappa vizsgabizonyítékai kerülnek az első commitba.
 - A generált build, a helyi csomagok és munkafájlok, a stockfotó-jelöltek és a korábbi exportok a Git figyelmen kívül hagyott fájljai. A jelöltgaléria képei az eredeti munkamappában érhetők el.
+
+## 2026. november 12. – Élesítés és vizsgabeadás
+
+- A jóváhagyott V1 main ága felkerült GitHubra. A Netlify-telepítés sikeres, a weboldal nyilvános. [Élő weboldal](https://tartas-gyogytorna-vizsgamunka.netlify.app/) · [GitHub-repó](https://github.com/kbea0921-hash/tartas-gyogytorna-vizsgamunka)
+- Emberi teszt igazolta az engedélyezett Netlify Forms felismerést, az `idopontkeres` űrlap fiktív adatokkal végzett sikeres éles beküldését, a köszönőoldalt és az e-mail-értesítés megérkezését.
+- Codex véglegesítette a látogatói űrlapszöveget, a köszönőoldalt, az öt canonical URL-t, a sitemapot és a robots.txt-t. A dokumentált munkafolyamatból egyoldalas AI-használati leírás és beadási ellenőrzőlista készült. [Beadási ellenőrzőlista](../Beadás/beadasi-ellenorzolista.md)

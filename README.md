@@ -18,17 +18,16 @@ Az előnézet címe [http://localhost:4173/](http://localhost:4173/). A build a 
 | Rólam | `/rolam/` |
 | Kapcsolat és időpontkérés | `/kapcsolat/` |
 | Adatkezelési tájékoztató | `/adatkezeles/` |
-| Próbaüzenet visszaigazolása | `/koszonjuk/` |
+| Időpontkérés visszaigazolása | `/koszonjuk/` |
 
 A webhely a négy jóváhagyott WebP-t tölti be. A build a jelöltarchívumot és a munkadokumentumokat nem csomagolja. [Képek, források és alt szövegek](docs/11-vegleges-kepforrasok.md)
 
-## Próbaűrlap és Netlify
+## Közzététel és űrlap
 
-A Kapcsolat oldal statikus `idopontkeres` POST-űrlapja rejtett `form-name` értéket és honeypotot tartalmaz. Érvényes próbaküldéskor a cél a `/koszonjuk/`. A helyi szerver a fiktív próbaadatokkal szimulálja a választ, az űrlapadatokat eldobja. Netlify-on a statikus `dist` mappát kell közzétenni. [Netlify Forms beállítása](https://docs.netlify.com/manage/forms/setup/)
+A forrás a GitHub `main` ágán érhető el. A Netlify sikeresen közzétette a statikus `dist` mappát. [Élő weboldal](https://tartas-gyogytorna-vizsgamunka.netlify.app/) · [GitHub-repó](https://github.com/kbea0921-hash/tartas-gyogytorna-vizsgamunka)
 
-## Élesítés előtt
+A Netlify Forms űrlapfelismerése engedélyezve van. A Kapcsolat oldal statikus `idopontkeres` POST-űrlapja rejtett `form-name` mezőt és honeypotot használ, a sikeres beküldés célja a `/koszonjuk/`. Az emberi éles teszt fiktív adatokkal sikerült, a köszönőoldal megjelent és a Netlify e-mail-értesítés megérkezett. A helyi előnézet az adatokat eldobja.
 
-- Ellenőrizze vizuálisan az oldalakat mobilon és asztali nézetben.
-- Ellenőrizze az adatkezelési tájékoztatót a tényleges Netlify Forms-beállítások alapján.
-- Kapcsolja be a Netlify Forms űrlapfelismerést, ellenőrizze a beküldést a Netlify felületén, és szükség esetén állítsa be az értesítési címet a szolgáltatásban. A próba csak fiktív adatokkal történjen.
-- A végleges domain ismeretében állítsa be a canonical URL-eket.
+Az öt indexelhető oldal önmagára mutató canonical URL-t kapott. A build tartalmazza a `sitemap.xml` és a `robots.txt` fájlt. A köszönőoldal `noindex`.
+
+A vizsgabeadás fájljait a beadási lista sorolja fel. [Beadási ellenőrzőlista](Beadás/beadasi-ellenorzolista.md) · [Ellenőrzési jegyzőkönyv](docs/12-megvalositas-v1-ellenorzes.md)

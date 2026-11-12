@@ -6,7 +6,7 @@
 | Vizsgamunka célja | Portfólióban bemutatható webdesignmunka egy fiktív debreceni gyógytorna-stúdió számára. |
 | Üzleti cél a fiktív projektben | Többen kérjenek időpontot az első felmérésre. |
 | Elsődleges konverzió | Az első, 60 perces felmérésre szóló időpontkérés beküldése. A konkrét időpontot Bálint visszahívással egyezteti. |
-| Jelenlegi munkafázis | A V1 desktop- és mobilnézetének emberi vizuális ellenőrzése lezárult, a változat jóváhagyott. A helyi Git-verziókövetés alapja a main ágon készült el. |
+| Jelenlegi munkafázis | A V1 emberi vizuális jóváhagyása és éles űrlaptesztje megtörtént. A végleges SEO és a beadási dokumentáció elkészült. |
 | Legutóbbi frissítés | 2026. november 12. |
 
 ## Jóváhagyott oldalkör és funkciók
@@ -71,10 +71,13 @@ Az időpont egyeztetése telefonos visszahívással történik. Az [űrlap terve
 - Saját domain.
 - Külön portfólió-esettanulmány.
 
-## Nyitott döntések
+## Közzététel és űrlapteszt
 
-- A teljes adatkezelési tájékoztató az űrlap működéséhez igazodik. A hozzájárulást és a sikerüzenetet az űrlap működésének ellenőrzése és a tájékoztató elkészítése után véglegesítjük. A fogadó címet az élesítéskor kell beállítani.
+- A GitHub-repó main ága elérhető. [GitHub-repó](https://github.com/kbea0921-hash/tartas-gyogytorna-vizsgamunka)
+- A Netlify-telepítés sikeres, a weboldal nyilvánosan megnyitható. [Élő weboldal](https://tartas-gyogytorna-vizsgamunka.netlify.app/)
+- A Netlify Forms felismerése engedélyezve van. Az aktív űrlap neve `idopontkeres`. Az emberi tesztben a fiktív adatokkal beküldött üzenet célba ért, a köszönőoldal megjelent és az e-mail-értesítés megérkezett.
+- A véglegesítési ellenőrzés és a beadási anyagok elérhetők. [Ellenőrzési jegyzőkönyv](docs/12-megvalositas-v1-ellenorzes.md) · [Beadási ellenőrzőlista](Beadás/beadasi-ellenorzolista.md)
 
 ## Következő pontos lépés
 
-GitHub-repó létrehozása és a jóváhagyott main ág első feltöltése külön jóváhagyás után.
+A beadási ellenőrzőlista alapján az élő és a GitHub-link, a képernyőképek és az AI-használati leírás benyújtása.

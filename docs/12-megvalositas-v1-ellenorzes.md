@@ -28,7 +28,7 @@ Statikus HTML-oldalak, közös CSS és natív JavaScript. A Node.js csak a build
 | SEO | Hat egyedi title és meta description, oldalanként egy H1, lépcsőzetes címsorok, magyar nyelv, favicon és szemantikus oldalterületek. A canonical URL a végleges domain ismeretében kerül be. |
 | Hozzáférhetőség | A látható fókusz, a tartalomugró, a 44 × 44 px-es célméretek, az aktív navigáció és a menü állapota ellenőrizve. A mobilmenü Enterrel nyílik, Escape bezárja és visszaadja a fókuszt. A GYIK Enterrel és Szóközzel működik. JavaScript nélkül a menüpontok elérhetők, az űrlap natív ellenőrzése aktív. |
 
-## Nyitott feladatok
+## A helyi V1 után ütemezett feladatok
 
 - Emberi vizuális ellenőrzés a helyi előnézeten.
 - A próbaűrlap adatkezelési tájékoztatójának ellenőrzése a tényleges Netlify Forms-beállítások alapján.
@@ -40,3 +40,13 @@ Statikus HTML-oldalak, közös CSS és natív JavaScript. A Node.js csak a build
 Az új build sikeres. A hat oldalt Chrome-ban 390 és 1440 px szélességen ellenőriztük. Az űrlap előtti mondat háttér nélküli, kisebb szövegként jelenik meg. A két segédszöveg a kért módon változott. Az adatkezelési oldal a technikai próbaküldés célját írja le. A meta leírások az oldalak tartalmát mutatják be.
 
 A két nézetben a lapok vízszintes túlcsordulás nélkül jelentek meg, az időpontkérő linkek a `/kapcsolat/#idopontkeres` célra mutattak. A helyi tesztben a magyar hibajelzés az első hibás mezőre irányította a fókuszt, az érvényes fiktív POST pedig elérte a visszaigazoló oldalt.
+
+## 2026. november 12. – Élesítés és véglegesítés
+
+- A GitHub-repó elkészült, a main ág felkerült. A Netlify-telepítés sikeres, a nyilvános főoldal HTTP 200 választ adott. [GitHub](https://github.com/kbea0921-hash/tartas-gyogytorna-vizsgamunka) · [Netlify](https://tartas-gyogytorna-vizsgamunka.netlify.app/)
+- Emberi ellenőrzés igazolta az engedélyezett Netlify Forms-űrlapfelismerést és az `idopontkeres` űrlap fiktív adatokkal végzett éles beküldését. A köszönőoldal megjelent és az e-mail-értesítés megérkezett.
+- A véglegesítés a köszönőoldal szövegét, a látogatói űrlapnyelvet és az SEO technikai elemeit érinti. Az öt indexelhető oldal saját canonical URL-t kapott, a sitemap öt címet tartalmaz, a robots.txt erre hivatkozik. A köszönőoldal noindex.
+
+A végleges `npm run build` sikeres, a `dist` 16 fájlt tartalmaz. Chrome-ban mind a hat oldal ellenőrizve 390 és 1440 px-en, vízszintes túlcsordulás nélkül. A buildből ellenőriztünk 26 belső hivatkozást és erőforrást, mind a négy kép betöltését, a CTA-kat, a canonical URL-eket, a sitemapot és a robots.txt-t. A Netlify-űrlap HTML-je egyezik a korábban tesztelt változattal. A véglegesítés során éles űrlapbeküldés nem történt.
+
+Az AI-használati leírás nyomtatott változata egy A4-es oldal. Az oldalméretet, az oldalszámot és a megjelenést ellenőriztük. [Beadási ellenőrzőlista](../Beadás/beadasi-ellenorzolista.md)

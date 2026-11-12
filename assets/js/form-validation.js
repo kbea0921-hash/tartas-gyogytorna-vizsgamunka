@@ -5,7 +5,7 @@ const messages = {
   email: "Adjon meg e-mail-formátumú fiktív címet, vagy hagyja üresen a mezőt.",
   ok: "Válassza ki a kapcsolatfelvétel okát.",
   visszahivas: "Adjon meg egy napot vagy idősávot.",
-  hozzajarulas: "A próbaküldéshez jelölje be a hozzájárulást."
+  hozzajarulas: "A beküldéshez jelölje be a hozzájárulást."
 };
 
 const fields = Object.keys(messages).map((name) => {

@@ -11,7 +11,9 @@ const types = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".svg": "image/svg+xml",
-  ".webp": "image/webp"
+  ".webp": "image/webp",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8"
 };
 
 await readFile(resolve(root, "index.html"));
@@ -33,7 +35,7 @@ function previewSubmission(request, response) {
 
     if (!valid) {
       response.writeHead(400, { "Content-Type": "text/plain; charset=utf-8" });
-      response.end("Hiányos próbaküldés. Térjen vissza az űrlaphoz.");
+      response.end("Hiányos űrlap. Térjen vissza az űrlaphoz.");
       return;
     }
 
