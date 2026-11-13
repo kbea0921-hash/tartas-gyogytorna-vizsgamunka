@@ -50,3 +50,10 @@ A két nézetben a lapok vízszintes túlcsordulás nélkül jelentek meg, az id
 A végleges `npm run build` sikeres, a `dist` 16 fájlt tartalmaz. Chrome-ban mind a hat oldal ellenőrizve 390 és 1440 px-en, vízszintes túlcsordulás nélkül. A buildből ellenőriztünk 26 belső hivatkozást és erőforrást, mind a négy kép betöltését, a CTA-kat, a canonical URL-eket, a sitemapot és a robots.txt-t. A Netlify-űrlap HTML-je egyezik a korábban tesztelt változattal. A véglegesítés során éles űrlapbeküldés nem történt.
 
 Az AI-használati leírás nyomtatott változata egy A4-es oldal. Az oldalméretet, az oldalszámot és a megjelenést ellenőriztük. [Beadási ellenőrzőlista](../Beadás/beadasi-ellenorzolista.md)
+
+## 2026. november 13. – Adatkezelési tájékoztató és megszólalás
+
+- A tájékoztató 12 szakaszban ismerteti az űrlap adatkezelését. Megmaradt az oldal címe és canonical URL-je, a frissített meta leírás az új tartalmat foglalja össze. Az oldal indexelhető.
+- A build 16 fájllal elkészült. Mind a hat oldalt ellenőriztük Chrome-ban 390 és 1440 px szélességen, vízszintes túlcsordulás nélkül. A 18 egyedi belső hivatkozás és ugrópont, köztük a lábléc és a hozzájárulás adatkezelési linkje, működik. A lecserélt mondatok hiányoznak a buildből.
+- Az űrlap HTML-je és ellenőrzőkódja egyezik a korábbi változattal. Mind az öt kötelező mező és a hozzájárulási jelölőnégyzet ellenőrizve. Új éles beküldés nem történt.
+- A 30 napos felső határ a tájékoztatóban rögzített megőrzési szabály. A Netlify Forms-beküldések és az esetleges e-mail-másolatok határidőn belüli törlése üzemeltetési feladat. [Netlify Forms – beküldések kezelése](https://docs.netlify.com/manage/forms/submissions/)

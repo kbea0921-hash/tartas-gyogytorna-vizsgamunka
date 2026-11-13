@@ -7,7 +7,7 @@
 | Üzleti cél a fiktív projektben | Többen kérjenek időpontot az első felmérésre. |
 | Elsődleges konverzió | Az első, 60 perces felmérésre szóló időpontkérés beküldése. A konkrét időpontot Bálint visszahívással egyezteti. |
 | Jelenlegi munkafázis | A V1 emberi vizuális jóváhagyása és éles űrlaptesztje megtörtént. A végleges SEO és a beadási dokumentáció elkészült. |
-| Legutóbbi frissítés | 2026. november 12. |
+| Legutóbbi frissítés | 2026. november 13. |
 
 ## Jóváhagyott oldalkör és funkciók
 
@@ -77,6 +77,8 @@ Az időpont egyeztetése telefonos visszahívással történik. Az [űrlap terve
 - A Netlify-telepítés sikeres, a weboldal nyilvánosan megnyitható. [Élő weboldal](https://tartas-gyogytorna-vizsgamunka.netlify.app/)
 - A Netlify Forms felismerése engedélyezve van. Az aktív űrlap neve `idopontkeres`. Az emberi tesztben a fiktív adatokkal beküldött üzenet célba ért, a köszönőoldal megjelent és az e-mail-értesítés megérkezett.
 - A véglegesítési ellenőrzés és a beadási anyagok elérhetők. [Ellenőrzési jegyzőkönyv](docs/12-megvalositas-v1-ellenorzes.md) · [Beadási ellenőrzőlista](Beadás/beadasi-ellenorzolista.md)
+
+- Az adatkezelési tájékoztató a Netlify Forms űrlap mezőit, adatkezelési folyamatát és a legfeljebb 30 napos megőrzést ismerteti. A szolgáltatás menetéről szóló szövegek Bálint egyes szám első személyű megszólalását követik.
 
 ## Következő pontos lépés
 
